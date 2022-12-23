@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 import { Table } from "./Table";
 import Calendar from "react-calendar";
 import Navfooter from "../Components/Nav_footer";
@@ -9,7 +9,7 @@ import '../CSS/Apps.css';
 
 class Secondpage extends Component {
   
-  searchParams = new URLSearchParams(document.location.search);
+  searchParams = new URLSearchParams(useLocation().search);
   constructor(props) {
     super(props);
     console.log(this.searchParams.get("DOB"),"jkfhjkfj")

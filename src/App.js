@@ -12,11 +12,12 @@ import {Route, Routes,HashRouter as Router} from "react-router-dom";
 
 function App() {
   return (
-    <Router>
+    
+    <Routes>
         <Route exact path='/submagic' element={<Apps/>}Route/>
-        <Route   path="/magic_table" element={<Secondpage />} />
+        <Route   path="/magic_table?DOB=28-07-2000" element={<Secondpage />} />
         <Route exact path='/' element={<Content/>}Route/> 
-    </Router>
+    </Routes>
   );
 }
 
