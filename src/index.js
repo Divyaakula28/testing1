@@ -10,7 +10,7 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HashRouter>
+    <HashRouter basename='/testing1'>
      <App/>
     </HashRouter>
   </React.StrictMode>
