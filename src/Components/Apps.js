@@ -34,7 +34,6 @@ class Apps extends Component {
     this.setState({urlDate:k,date:event})
   };
   render() {
-    
     return (
       <div>
         <center>

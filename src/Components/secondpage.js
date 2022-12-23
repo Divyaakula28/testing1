@@ -10,11 +10,9 @@ import '../CSS/Apps.css';
 class Secondpage extends Component {
   
   searchParams = new URLSearchParams(document.location.search);
-
   constructor(props) {
-    
     super(props);
-    console.log(this.searchParams.get("DOB"))
+    console.log(this.searchParams.get("DOB"),"jkfhjkfj")
     this.state = {
       Date:'2000-12-28',
       urlDate:this.searchParams.get("DOB"),
