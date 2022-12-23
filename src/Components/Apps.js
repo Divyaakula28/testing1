@@ -44,7 +44,7 @@ class Apps extends Component {
             value={this.state.date.toLocaleDateString()}
             onFocus={() => this.setState({showCalendar:true,cond:false})}
           />
-          <Link to={`/magic_table?DOB=${this.state.urlDate}`} state={this.state.date}><button onClick={this.clicked} className='forbutton' >Check Here </button></Link>
+          <Link to={{pathname: "/magic_table",search:`?DOB=${this.state.urlDate}`}} state={this.state.date}><button onClick={this.clicked} className='forbutton' >Check Here </button></Link>
           <Calendar  id='calendar'
             className={this.state.showCalendar ? "show" : "hide" } 
             value={this.state.date}
