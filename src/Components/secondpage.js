@@ -16,12 +16,12 @@ class Secondpage extends Component {
     super(props);
     console.log(this.searchParams)
     this.state = {
-      Date:(this.searchParams.get("DOB").slice(6,10)+'-'+this.searchParams.get("DOB").slice(3,5)+'-'+this.searchParams.get("DOB").slice(0,2)),
+      Date:'2000-07-28',
       urlDate:this.searchParams.get("DOB"),
       Dates:this.searchParams.get("DOB").slice(0,2),
       Months:this.searchParams.get("DOB").slice(3,5),
       Years:this.searchParams.get("DOB").slice(6,10),
-      fisrtone:(new Date(this.searchParams.get("DOB").slice(3,5)+' '+this.searchParams.get("DOB").slice(0,2)+' '+this.searchParams.get("DOB").slice(6,10))),
+      fisrtone:(new Date('28-07-2000')),
       nochnge:true,
       cnt:1
     }; 
