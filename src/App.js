@@ -12,13 +12,11 @@ import {Route, Routes,BrowserRouter} from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL || ''}>
       <Routes>
         <Route exact path='/submagic' element={<Apps/>}Route/>
         <Route   path="/magic_table" element={<Secondpage />} />
         <Route exact path='/' element={<Content/>}Route/> 
       </Routes>
-      </BrowserRouter>
   );
 }
 
