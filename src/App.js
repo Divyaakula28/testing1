@@ -15,7 +15,7 @@ function App() {
     
     <Routes>
         <Route exact path='/submagic' element={<Apps/>}Route/>
-        <Route   path="/magic_table?DOB=28-07-2000" element={<Secondpage />} />
+        <Route   path="/magic_table" element={<Secondpage />} />
         <Route exact path='/' element={<Content/>}Route/> 
     </Routes>
   );
