@@ -35,6 +35,7 @@ class Secondpage extends Component {
     );
   };
   componentDidMount() {
+    /*
     const intervalId = setInterval(() => {
       this.setState(prevState => {
         return {
@@ -42,6 +43,8 @@ class Secondpage extends Component {
         };
       });
     }, 2500);
+  
+  */
   }
  
   datechange = value => {
@@ -66,6 +69,7 @@ class Secondpage extends Component {
     this.setState({jj:true});}
 
   render() {
+    console.log(this.searchParams.get("DOB"))
     if (this.state.Date.length!==10 || !isNaN(this.state.Dates) === false || !isNaN(this.state.Months) === false || !isNaN(this.state.Years) === false || this.searchParams.get("DOB").slice(2,3)!=='-' || this.searchParams.get("DOB").slice(5,6)!=='-') {
       return <h1>error</h1>;
     } 
