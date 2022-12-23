@@ -8,15 +8,17 @@ import Content from "./Components/Content"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
-import {Route, Routes} from "react-router-dom";
+import {Route, Routes,BrowserRouter} from "react-router-dom";
 
 function App() {
   return (
+    <BrowserRouter basename={process.env.PUBLIC_URL || ''}>
       <Routes>
         <Route exact path='/submagic' element={<Apps/>}Route/>
         <Route   path="/magic_table" element={<Secondpage />} />
         <Route exact path='/' element={<Content/>}Route/> 
       </Routes>
+      </BrowserRouter>
   );
 }
 
