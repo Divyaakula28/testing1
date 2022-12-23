@@ -8,14 +8,14 @@ import Content from "./Components/Content"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
-import {Route, Routes,HashRouter} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 
 function App() {
   return (
       <Routes>
         <Route exact path='/submagic' element={<Apps/>}Route/>
         <Route   path="/magic_table" element={<Secondpage />} />
-        <Route exact path='/' element={<Content/>}Route/>
+        <Route exact path='/' element={<Content/>}Route/> 
       </Routes>
   );
 }
