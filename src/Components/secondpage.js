@@ -16,7 +16,7 @@ class Secondpage extends Component {
     super(props);
     console.log(this.searchParams.get("DOB"))
     this.state = {
-      Date:(this.searchParams.get("DOB").slice(6,10)+'-'+this.searchParams.get("DOB").slice(3,5)+'-'+this.searchParams.get("DOB").slice(0,2)),
+      Date:'2000-12-28',
       urlDate:this.searchParams.get("DOB"),
       Dates:this.searchParams.get("DOB").slice(0,2),
       Months:this.searchParams.get("DOB").slice(3,5),
