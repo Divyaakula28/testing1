@@ -12,14 +12,16 @@ class Secondpage extends Component {
   searchParams = new URLSearchParams(document.location.search);
 
   constructor(props) {
+    
     super(props);
+    console.log(this.searchParams.get("DOB"))
     this.state = {
       Date:(this.searchParams.get("DOB").slice(6,10)+'-'+this.searchParams.get("DOB").slice(3,5)+'-'+this.searchParams.get("DOB").slice(0,2)),
       urlDate:this.searchParams.get("DOB"),
       Dates:this.searchParams.get("DOB").slice(0,2),
       Months:this.searchParams.get("DOB").slice(3,5),
       Years:this.searchParams.get("DOB").slice(6,10),
-      fisrtone:(new Date('28-07-2000')),
+      fisrtone:(new Date(this.searchParams.get("DOB").slice(3,5)+' '+this.searchParams.get("DOB").slice(0,2)+' '+this.searchParams.get("DOB").slice(6,10))),
       nochnge:true,
       cnt:1
     }; 
@@ -35,7 +37,6 @@ class Secondpage extends Component {
     );
   };
   componentDidMount() {
-    /*
     const intervalId = setInterval(() => {
       this.setState(prevState => {
         return {
@@ -43,8 +44,6 @@ class Secondpage extends Component {
         };
       });
     }, 2500);
-  
-  */
   }
  
   datechange = value => {
@@ -69,7 +68,6 @@ class Secondpage extends Component {
     this.setState({jj:true});}
 
   render() {
-    console.log(this.searchParams.get("DOB"))
     if (this.state.Date.length!==10 || !isNaN(this.state.Dates) === false || !isNaN(this.state.Months) === false || !isNaN(this.state.Years) === false || this.searchParams.get("DOB").slice(2,3)!=='-' || this.searchParams.get("DOB").slice(5,6)!=='-') {
       return <h1>error</h1>;
     } 
