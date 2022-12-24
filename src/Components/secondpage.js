@@ -11,9 +11,9 @@ class Secondpage extends Component {
   
   searchParams = new URLSearchParams(document.location.search);
   url = new URL(window.location.href);
-    lang = this.url.hash.split("?")[1].split("=")[1];
+  lang = this.url.hash.split("?")[1].split("=")[1];
   constructor(props) {
-    
+    console.log(this.lang)
     super(props);
     this.state = {
       Date:this.lang,
@@ -69,7 +69,7 @@ class Secondpage extends Component {
 
   render() {
     console.log(this.lang)
-    if (this.state.Date.length!==10 || !isNaN(this.state.Dates) === false || !isNaN(this.state.Months) === false || !isNaN(this.state.Years) === false || this.searchParams.get("DOB").slice(2,3)!=='-' || this.searchParams.get("DOB").slice(5,6)!=='-') {
+    if (this.state.Date.length!==10 || !isNaN(this.state.Dates) === false || !isNaN(this.state.Months) === false || !isNaN(this.state.Years) === false || this.lang.slice(2,3)!=='-' || this.lang.slice(5,6)!=='-') {
       return <h1>error</h1>;
     } 
     else{
