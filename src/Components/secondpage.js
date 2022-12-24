@@ -10,14 +10,15 @@ import '../CSS/Apps.css';
 class Secondpage extends Component {
   
   searchParams = new URLSearchParams(document.location.search);
-
+  url = new URL(window.location.href);
+    lang = this.url.searchParams.get("DOB");
   constructor(props) {
     
     super(props);
     console.log(Object.fromEntries(this.searchParams.entries()))
     this.state = {
       Date:'2000-07-28',
-      urlDate:this.searchParams.get("DOB"),
+      urlDate:this.searchParams.get('DOB'),
       Dates:this.searchParams.get("DOB").slice(0,2),
       Months:this.searchParams.get("DOB").slice(3,5),
       Years:this.searchParams.get("DOB").slice(6,10),
@@ -68,6 +69,7 @@ class Secondpage extends Component {
     this.setState({jj:true});}
 
   render() {
+    console.log(this.lang)
     if (this.state.Date.length!==10 || !isNaN(this.state.Dates) === false || !isNaN(this.state.Months) === false || !isNaN(this.state.Years) === false || this.searchParams.get("DOB").slice(2,3)!=='-' || this.searchParams.get("DOB").slice(5,6)!=='-') {
       return <h1>error</h1>;
     } 
