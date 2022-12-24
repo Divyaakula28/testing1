@@ -11,11 +11,11 @@ class Secondpage extends Component {
   
   searchParams = new URLSearchParams(document.location.search);
   url = new URL(window.location.href);
-    lang = this.url.searchParams.get("DOB");
+    lang = this.url.hash;
   constructor(props) {
     
     super(props);
-    console.log(this.url)
+    console.log(this.lang)
     this.state = {
       Date:'2000-07-28',
       urlDate:this.searchParams.get('DOB'),
