@@ -15,7 +15,8 @@ class Secondpage extends Component {
   
   constructor(props) {
     super(props);
-    console.log(this.lang)
+    console.log(this.url)
+    console.log(this.url.hash)
     this.state = {
       Date:this.lang,
       urlDate:this.lang,
