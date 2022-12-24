@@ -12,9 +12,10 @@ class Secondpage extends Component {
   searchParams = new URLSearchParams(document.location.search);
   url = new URL(window.location.href);
   lang = this.url.hash.split("?")[1].split("=")[1];
+  
   constructor(props) {
-    console.log(this.lang)
     super(props);
+    console.log(this.lang[6])
     this.state = {
       Date:this.lang,
       urlDate:this.lang,
@@ -68,11 +69,7 @@ class Secondpage extends Component {
     this.setState({jj:true});}
 
   render() {
-    console.log(this.lang)
-    if (this.state.Date.length!==10 || !isNaN(this.state.Dates) === false || !isNaN(this.state.Months) === false || !isNaN(this.state.Years) === false || this.lang.slice(2,3)!=='-' || this.lang.slice(5,6)!=='-') {
-      return <h1>error</h1>;
-    } 
-    else{
+    
       return (
         <div>
           <Navfooter/>
@@ -98,8 +95,7 @@ class Secondpage extends Component {
       );
     }
   }
-  
-}
+
 
 export default Secondpage;
 
