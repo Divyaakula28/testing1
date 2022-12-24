@@ -15,7 +15,7 @@ class Secondpage extends Component {
   constructor(props) {
     
     super(props);
-    console.log(Object.fromEntries(this.searchParams.entries()))
+    console.log(this.lang)
     this.state = {
       Date:'2000-07-28',
       urlDate:this.searchParams.get('DOB'),
