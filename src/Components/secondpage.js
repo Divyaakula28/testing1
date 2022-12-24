@@ -11,18 +11,17 @@ class Secondpage extends Component {
   
   searchParams = new URLSearchParams(document.location.search);
   url = new URL(window.location.href);
-    lang = this.url.hash;
+    lang = this.url.hash.split("?")[1].split("=")[1];
   constructor(props) {
     
     super(props);
-    console.log(this.lang.split("?")[1].split("=")[1])
     this.state = {
-      Date:'2000-07-28',
-      urlDate:this.searchParams.get('DOB'),
-      Dates:this.searchParams.get("DOB").slice(0,2),
-      Months:this.searchParams.get("DOB").slice(3,5),
-      Years:this.searchParams.get("DOB").slice(6,10),
-      fisrtone:(new Date('28-07-2000')),
+      Date:this.lang,
+      urlDate:this.lang,
+      Dates:this.lang.slice(0,2),
+      Months:this.lang.slice(3,5),
+      Years:this.lang.slice(6,10),
+      fisrtone:(new Date(this.lang.slice(3,5)+' '+this.lang.slice(0,2)+' '+this.lang.slice(6,10))),
       nochnge:true,
       cnt:1
     }; 
@@ -41,7 +40,7 @@ class Secondpage extends Component {
     const intervalId = setInterval(() => {
       this.setState(prevState => {
         return {
-          Date: (this.searchParams.get("DOB").slice(6,10)+'-'+this.searchParams.get("DOB").slice(3,5)+'-'+this.searchParams.get("DOB").slice(0,2)),
+          Date: (this.state.Date);
         };
       });
     }, 2500);
