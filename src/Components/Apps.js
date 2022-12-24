@@ -30,11 +30,11 @@ class Apps extends Component {
     const k=y+'-'+z+'-'+value.getFullYear();
     const fortesting=z+' '+y+' '+value.getFullYear()
     const event = new Date(fortesting);
-    console.log(event);
+    //console.log(event);
     this.setState({urlDate:k,date:event})
   };
   render() {
-    console.log(this.state.urlDate);
+    //console.log(this.state.urlDate);
     return (
       <div>
         <center>

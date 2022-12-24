@@ -15,7 +15,7 @@ class Secondpage extends Component {
   
   constructor(props) {
     super(props);
-    console.log(this.lang[6])
+    console.log(this.lang)
     this.state = {
       Date:this.lang,
       urlDate:this.lang,
@@ -69,7 +69,7 @@ class Secondpage extends Component {
     this.setState({jj:true});}
 
   render() {
-    
+    console.log(this.lang[6])
       return (
         <div>
           <Navfooter/>
