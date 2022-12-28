@@ -9,9 +9,9 @@ function Nav_footer() {
       <div className="App ">
         <Navbar>
           <div>
-          <NavbarBrand href="/https://divyaakula28.github.io/testing1/"><img alt="" src={logo} width="100" height="60"/></NavbarBrand>
+          <NavbarBrand href="/"><img alt="" src={logo} width="100" height="60"/></NavbarBrand>
             <div>
-            <NavbarBrand href="https://divyaakula28.github.io/testing1/" className='heading'>Magic Table</NavbarBrand>
+            <NavbarBrand href='/' className='heading'>Magic Table</NavbarBrand>
             </div>
           </div>
 
